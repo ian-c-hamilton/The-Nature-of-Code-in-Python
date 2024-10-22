@@ -1,11 +1,20 @@
 import py5
 
+def settings():
+    global width
+    global height
+    width = 800
+    height = 800
+    py5.size(width, height)
+
 def setup():
-    py5.size(300, 200)
+    global w1
     py5.rect_mode(py5.CENTER)
+    py5.background(255)
+
 
 def draw():
-    py5.square(py5.mouse_x, py5.mouse_y, 10)
-    py5.fill(py5.random_int(255), py5.random_int(255), py5.random_int(255))
+    w1.step()
+    w1.show()
 
 py5.run_sketch()
